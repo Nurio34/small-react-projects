@@ -1,13 +1,11 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
 import "./App.css";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
 
 function App() {
-    const [projects, setProjects] = useState(["counter", "people", "color"]);
-    const [currentProject, setCurrentProject] = useState("people");
+    const [projects, setProjects] = useState(["people", "hobbies","github-users"]);
+    const [currentProject, setCurrentProject] = useState("github-users");
     const [count, setCount] = useState(0);
 
     const displayProject = (pro) => {

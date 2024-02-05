@@ -1,7 +1,7 @@
 function Button({ project, displayProject }) {
     return (
         <button
-            className=" border-[1px] border-black p-1 rounded-md transition-all
+            className=" border-[1px] border-black p-1 rounded-md transition-all capitalize
             hover:bg-orange-400 
             active:scale-90 
             "
