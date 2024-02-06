@@ -8,9 +8,10 @@ function App() {
         "people",
         "hobbies",
         "github-users",
+        "sign/log"
     ]);
-    const [currentProject, setCurrentProject] = useState("github-users");
-    const [count, setCount] = useState(0);
+
+    const [currentProject, setCurrentProject] = useState("sign/log");
 
     const displayProject = (pro) => {
         setCurrentProject(pro);

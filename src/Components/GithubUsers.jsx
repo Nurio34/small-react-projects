@@ -4,7 +4,7 @@ function GithubUsers({ project, currentProject }) {
     const [users, setUsers] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
-    console.log(false && 2);
+
     useEffect(() => {
         const fetchGithubUsers = async () => {
             try {
@@ -38,12 +38,10 @@ function GithubUsers({ project, currentProject }) {
     }, []);
 
     return (
-        <>
+        <div data-id={project}
+            style={{display: project === currentProject ? "grid" : "none"}}>
             <div
-                data-id={project}
-                style={{
-                    display: project === currentProject ? "grid" : "none",
-                }}
+                
             >
                 <h1 className="p-2 text-center uppercase font-semibold">
                     Github Users
@@ -89,7 +87,7 @@ function GithubUsers({ project, currentProject }) {
                 An Error Occured. <br />
                 Refresh the Page...
             </div>
-        </>
+        </div>
     );
 }
 
