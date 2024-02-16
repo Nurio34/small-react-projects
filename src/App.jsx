@@ -8,10 +8,11 @@ function App() {
         "people",
         "hobbies",
         "github-users",
-        "sign/log"
+        "sign/log",
+        "pokemonAPI",
     ]);
 
-    const [currentProject, setCurrentProject] = useState("sign/log");
+    const [currentProject, setCurrentProject] = useState("pokemonAPI");
 
     const displayProject = (pro) => {
         setCurrentProject(pro);

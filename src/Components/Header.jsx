@@ -3,7 +3,7 @@ import Button from "./Button";
 function Header({ projects, displayProject }) {
     return (
         <header
-            className="header flex justify-center p-2 border-[1px] border-b-gray-300 gap-4  "
+            className="header flex flex-wrap justify-center p-2 border-[1px] border-b-gray-300 gap-4  "
             id="header"
         >
             {projects.map((project, index) => {
