@@ -5,44 +5,45 @@ function GithubUsers({ project, currentProject }) {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
 
-    useEffect(() => {
-        const fetchGithubUsers = async () => {
-            try {
-                const response = await fetch("https://api.github.com/users");
-                const users = await response.json();
-                if (!response.ok) {
-                    setTimeout(() => {
-                        setIsError(true);
-                    }, 3000);
-                    return;
-                }
+    //! UNCOMMENT CODES BELOW TO RUN THİS APP
+    // useEffect(() => {
+    //     const fetchGithubUsers = async () => {
+    //         try {
+    //             const response = await fetch("https://api.github.com/users");
+    //             const users = await response.json();
+    //             if (!response.ok) {
+    //                 setTimeout(() => {
+    //                     setIsError(true);
+    //                 }, 3000);
+    //                 return;
+    //             }
 
-                setTimeout(() => {
-                    setUsers(users);
-                }, 3000);
-            } catch (error) {
-                setTimeout(() => {
-                    setIsError(true);
-                }, 3000);
-            } finally {
-                setTimeout(() => {
-                    window.addEventListener(
-                        "DOMContentLoaded",
-                        setIsLoading(false),
-                    );
-                }, 3000);
-            }
-        };
+    //             setTimeout(() => {
+    //                 setUsers(users);
+    //             }, 3000);
+    //         } catch (error) {
+    //             setTimeout(() => {
+    //                 setIsError(true);
+    //             }, 3000);
+    //         } finally {
+    //             setTimeout(() => {
+    //                 window.addEventListener(
+    //                     "DOMContentLoaded",
+    //                     setIsLoading(false),
+    //                 );
+    //             }, 3000);
+    //         }
+    //     };
 
-        fetchGithubUsers();
-    }, []);
+    //     fetchGithubUsers();
+    // }, []);
 
     return (
-        <div data-id={project}
-            style={{display: project === currentProject ? "grid" : "none"}}>
-            <div
-                
-            >
+        <div
+            data-id={project}
+            style={{ display: project === currentProject ? "grid" : "none" }}
+        >
+            <div>
                 <h1 className="p-2 text-center uppercase font-semibold">
                     Github Users
                 </h1>

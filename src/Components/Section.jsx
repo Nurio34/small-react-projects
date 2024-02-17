@@ -1,3 +1,4 @@
+import FormDataAPI from "./FormDataAPI";
 import GithubUsers from "./GithubUsers";
 import Hobbies from "./Hobbies";
 import People from "./People";
@@ -15,6 +16,10 @@ function Section({ projects, currentProject }) {
             />
             <SignLog project={projects[3]} currentProject={currentProject} />
             <PokemonAPI project={projects[4]} currentProject={currentProject} />
+            <FormDataAPI
+                project={projects[5]}
+                currentProject={currentProject}
+            />
         </section>
     );
 }

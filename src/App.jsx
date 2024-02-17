@@ -10,9 +10,10 @@ function App() {
         "github-users",
         "sign/log",
         "pokemonAPI",
+        "formDataAPI",
     ]);
 
-    const [currentProject, setCurrentProject] = useState("pokemonAPI");
+    const [currentProject, setCurrentProject] = useState("formDataAPI");
 
     const displayProject = (pro) => {
         setCurrentProject(pro);
