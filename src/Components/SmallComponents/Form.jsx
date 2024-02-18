@@ -11,7 +11,7 @@ function Form({ isMember, adjustForm, submitForm, isAnyBlank, successLogin }) {
             >
                 <p
                     className={`absolute right-0 transition-all ${
-                        !isAnyBlank ? "translate-x-full" : "translate-x-0"
+                        !isAnyBlank ? "translate-x-[101%]" : "translate-x-0"
                     } bg-red-500 text-white p-1`}
                 >
                     Please Provide All Info!
@@ -80,15 +80,6 @@ function Form({ isMember, adjustForm, submitForm, isAnyBlank, successLogin }) {
                     )}
                 </div>
             </form>
-
-            <div
-                style={{ transition: "1s ease-in" }}
-                className={`bg-gray-500 absolute w-full h-full grid place-content-center ${
-                    !successLogin ? " opacity-0 -z-10" : " opacity-100 z-10"
-                }`}
-            >
-                <span className=" w-10 aspect-square rounded-full loading"></span>
-            </div>
         </>
     );
 }

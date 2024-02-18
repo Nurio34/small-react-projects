@@ -11,9 +11,11 @@ function App() {
         "sign/log",
         "pokemonAPI",
         "formDataAPI",
+        "flipCoin",
+        "ticTacToe"
     ]);
 
-    const [currentProject, setCurrentProject] = useState("formDataAPI");
+    const [currentProject, setCurrentProject] = useState("ticTacToe");
 
     const displayProject = (pro) => {
         setCurrentProject(pro);

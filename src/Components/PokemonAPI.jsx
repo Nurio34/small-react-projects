@@ -28,17 +28,17 @@ function PokemonAPI({ project, currentProject }) {
     };
 
     //! UNCOMMENT CODES BELOW TO RUN THİS APP
-    // useEffect(() => {
-    //     const getData = async (id) => {
-    //         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
-    //         const data = await res.json();
-    //         setPokedex((preState) => {
-    //             return [...preState, data];
-    //         });
-    //     };
-    //     const total = Array(151).fill("p");
-    //     total.forEach((item, index) => getData(index + 1));
-    // }, []);
+    useEffect(() => {
+        const getData = async (id) => {
+            const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
+            const data = await res.json();
+            setPokedex((preState) => {
+                return [...preState, data];
+            });
+        };
+        const total = Array(151).fill("p");
+        total.forEach((item, index) => getData(index + 1));
+    }, []);
 
     return (
         <div
@@ -51,6 +51,7 @@ function PokemonAPI({ project, currentProject }) {
                 .sort((a, b) => a.id - b.id)
                 .map((pokemon) => {
                     // console.log(pokemon);
+                    //!! SADECE EVRİMLEŞMEMİŞ POKEMONLARI GÖSTERMEK İÇİN if(pokemon.base_experience < 72)
                     return (
                         <div
                             key={pokemon.id}

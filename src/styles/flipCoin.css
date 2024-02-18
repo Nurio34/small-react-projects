@@ -1,0 +1,24 @@
+figure {
+    position: relative;
+    width: 100px  !important;
+    height: 101px !important;
+    perspective: 600;
+}
+
+img{
+    position: absolute;
+    transition: 1s linear;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.coin_front {
+    z-index: 2;
+
+}
+
+.coin_back {
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+ 

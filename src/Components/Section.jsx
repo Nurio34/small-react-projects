@@ -1,9 +1,11 @@
+import FlipCoin from "./FlipCoin";
 import FormDataAPI from "./FormDataAPI";
 import GithubUsers from "./GithubUsers";
 import Hobbies from "./Hobbies";
 import People from "./People";
 import PokemonAPI from "./PokemonAPI";
 import SignLog from "./SignLog";
+import TicTacToe from "./TicTacToe/TicTacToe";
 
 function Section({ projects, currentProject }) {
     return (
@@ -20,6 +22,8 @@ function Section({ projects, currentProject }) {
                 project={projects[5]}
                 currentProject={currentProject}
             />
+            <FlipCoin project={projects[6]} currentProject={currentProject} />
+            <TicTacToe project={projects[7]} currentProject={currentProject} />
         </section>
     );
 }
