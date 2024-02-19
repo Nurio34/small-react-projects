@@ -24,7 +24,6 @@ function TicTacToe({project,currentProject}) {
     }
 
     useEffect(()=>{
-        console.log(squares);
         calcWinner(squares)
     },[squares])
 

@@ -15,7 +15,7 @@ function App() {
         "ticTacToe"
     ]);
 
-    const [currentProject, setCurrentProject] = useState("ticTacToe");
+    const [currentProject, setCurrentProject] = useState("pokemonAPI");
 
     const displayProject = (pro) => {
         setCurrentProject(pro);
