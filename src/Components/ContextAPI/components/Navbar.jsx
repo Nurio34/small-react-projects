@@ -3,8 +3,8 @@ import NavLinks from "./NavLinks";
 
 function Navbar() {
     return (
-        <div>
-            <p>Navbar</p>
+        <div className="flex">
+            <div>CONTEXT API</div>
             <NavLinks />
         </div>
     );

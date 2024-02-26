@@ -5,7 +5,7 @@ figure {
     perspective: 600;
 }
 
-img{
+.coin{
     position: absolute;
     transition: 1s linear;
     backface-visibility: hidden;

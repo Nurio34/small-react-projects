@@ -11,7 +11,6 @@ function index({pokemon}) {
 
     const [cardInfo, setCardInfo] = useState(null)
     const {id,name,types,stats,sprites} = pokemon
-    console.log(sprites.other.showdown.front_shiny);
   return (
     <div
         className="card border-[1px] border-red-500 rounded-md w-[102px] aspect-[0.7] 

@@ -29,8 +29,8 @@ function FlipCoin({project, currentProject}) {
         className=' place-content-center gap-4 p-4'
     >
         <figure ref={figureEl}>
-            <img src={coin_front} alt="" className='coin_front' ref={coinFrontEl}  />
-            <img src={coin_back} alt="" className='coin_back' ref={coinBackEl} />
+            <img src={coin_front} alt="" className='coin coin_front' ref={coinFrontEl}  />
+            <img src={coin_back} alt="" className='coin coin_back' ref={coinBackEl} />
         </figure>
         <button className=' bg-blue-600 text-white px-2' onClick={flip} >Flip</button>
     </div>
