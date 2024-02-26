@@ -11,11 +11,20 @@ function App() {
         "sign/log",
         "pokemonAPI",
         "formDataAPI",
+<<<<<<< HEAD
+        "useRef",
+        "customHook",
+        "contextAPI",
+    ]);
+
+    const [currentProject, setCurrentProject] = useState("contextAPI");
+=======
         "flipCoin",
         "ticTacToe"
     ]);
 
     const [currentProject, setCurrentProject] = useState("pokemonAPI");
+>>>>>>> b6cc1c30f190b3fb4dbda3d7e2aa1baf34f901d6
 
     const displayProject = (pro) => {
         setCurrentProject(pro);
