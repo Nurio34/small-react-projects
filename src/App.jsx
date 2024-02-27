@@ -16,10 +16,11 @@ function App() {
         "useRef",
         "customHook",
         "contextAPI",
-
+        "useReducer",
+        "performance",
     ]);
 
-    const [currentProject, setCurrentProject] = useState("contextAPI");
+    const [currentProject, setCurrentProject] = useState("performance");
 
     const displayProject = (pro) => {
         setCurrentProject(pro);

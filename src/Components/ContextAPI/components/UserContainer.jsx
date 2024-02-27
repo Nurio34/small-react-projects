@@ -1,10 +1,8 @@
-import { useContext } from "react";
-import { NavbarContext } from "..";
 import SubmitBtn from "../../SmallComponents/SubmitBtn";
+import { useAppContext } from ".."; //! contextAPI
 
 function UserContainer() {
-    const { user, logout, submitFn } = useContext(NavbarContext); //! contextAPI
-
+    const { user, logout, submitFn } = useAppContext(); //! contextAPI
     return (
         <div>
             {user ? (

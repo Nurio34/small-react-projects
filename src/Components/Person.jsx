@@ -1,6 +1,7 @@
 import React from "react";
 
 function Person({ personObj, removePerson }) {
+    console.log("render");
     return (
         <div className="text-center capitalize border-b-[1px] border-black p-2 ">
             <p>{personObj.name}</p>

@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { data, people } from "../datas/people";
+import { data } from "../datas/people";
 import Person from "./Person";
+import SubmitBtn from "./SmallComponents/SubmitBtn";
 
 function People({ project, currentProject }) {
     const [dataPeople, setDataPeople] = useState(data);
@@ -9,13 +10,16 @@ function People({ project, currentProject }) {
         const updatedDataPeople = dataPeople.filter(
             (person) => person.id != id,
         );
-        console.log(updatedDataPeople);
         setDataPeople(updatedDataPeople);
     };
 
     const clearAll = () => {
         const updatedDataPeople = [];
         setDataPeople(updatedDataPeople);
+    };
+
+    const resetList = () => {
+        setDataPeople(data);
     };
 
     return (
@@ -35,15 +39,19 @@ function People({ project, currentProject }) {
                     />
                 );
             })}
-            <button
-                className=" border-[1px] border-black p-1 rounded-md transition-all m-2 justify-self-stretch
+            {dataPeople.length > 0 ? (
+                <button
+                    className=" border-[1px] border-black p-1 rounded-md transition-all m-2 justify-self-stretch
                  hover:bg-blue-600 
                 active:scale-90 
                 "
-                onClick={clearAll}
-            >
-                Clear All
-            </button>
+                    onClick={clearAll}
+                >
+                    Clear All
+                </button>
+            ) : (
+                <SubmitBtn value={"Reset"} fn={resetList} />
+            )}
         </div>
     );
 }

@@ -1,8 +1,10 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext } from "react";
 import Navbar from "./components/Navbar";
-import { useLogInOut } from "../Hooks/useLogInOut";
+import { useLogInOut } from "../SmallComponents/hooks/useLogInOut"; //! customHook
 
 export const NavbarContext = createContext(); //! contextAPI
+
+export const useAppContext = () => useContext(NavbarContext); //! contextAPI
 
 function index({ project, currentProject }) {
     const [user, logout, submitFn] = useLogInOut(); //! custom hook
@@ -17,6 +19,7 @@ function index({ project, currentProject }) {
                 <Navbar />
             </div>
         </NavbarContext.Provider>
+        //! contextAPI
     );
 }
 

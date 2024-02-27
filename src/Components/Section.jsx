@@ -9,30 +9,25 @@ import UseRef from "./UseRef";
 import CustomHook from "./CustomHook";
 import ContextAPI from "./ContextAPI";
 import TicTacToe from "./TicTacToe/TicTacToe";
+import UseReducer from "./UseReducer";
+import Performance from "./Performance";
 
 function Section({ projects, currentProject }) {
     return (
         <section>
-            <People project={projects[0]} currentProject={currentProject} />
-            <Hobbies project={projects[1]} currentProject={currentProject} />
-            <GithubUsers
-                project={projects[2]}
-                currentProject={currentProject}
-            />
-            <SignLog project={projects[3]} currentProject={currentProject} />
-            <PokemonAPI project={projects[4]} currentProject={currentProject} />
-            <FormDataAPI
-                project={projects[5]}
-                currentProject={currentProject}
-            />
-            <FlipCoin project={projects[6]} currentProject={currentProject} />
-            <TicTacToe project={projects[7]} currentProject={currentProject} />
-            <UseRef project={projects[8]} currentProject={currentProject} />
-            <CustomHook project={projects[9]} currentProject={currentProject} />
-            <ContextAPI
-                project={projects[10]}
-                currentProject={currentProject}
-            />
+            {currentProject === projects[0] && <People />}
+            {currentProject === projects[1] && <Hobbies />}
+            {currentProject === projects[2] && <GithubUsers />}
+            {currentProject === projects[3] && <SignLog />}
+            {currentProject === projects[4] && <PokemonAPI />}
+            {currentProject === projects[5] && <FormDataAPI />}
+            {currentProject === projects[6] && <FlipCoin />}
+            {currentProject === projects[7] && <TicTacToe />}
+            {currentProject === projects[8] && <UseRef />}
+            {currentProject === projects[9] && <CustomHook />}
+            {currentProject === projects[10] && <ContextAPI />}
+            {currentProject === projects[11] && <UseReducer />}
+            {currentProject === projects[12] && <Performance />}
         </section>
     );
 }
