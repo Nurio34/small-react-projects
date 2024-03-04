@@ -18,9 +18,10 @@ function App() {
         "contextAPI",
         "useReducer",
         "performance",
+        "taskTracker",
     ]);
 
-    const [currentProject, setCurrentProject] = useState("performance");
+    const [currentProject, setCurrentProject] = useState("taskTracker");
 
     const displayProject = (pro) => {
         setCurrentProject(pro);

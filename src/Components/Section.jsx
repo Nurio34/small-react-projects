@@ -11,6 +11,7 @@ import ContextAPI from "./ContextAPI";
 import TicTacToe from "./TicTacToe/TicTacToe";
 import UseReducer from "./UseReducer";
 import Performance from "./Performance";
+import TaskTracker from "./TaskTracker";
 
 function Section({ projects, currentProject }) {
     return (
@@ -28,6 +29,7 @@ function Section({ projects, currentProject }) {
             {currentProject === projects[10] && <ContextAPI />}
             {currentProject === projects[11] && <UseReducer />}
             {currentProject === projects[12] && <Performance />}
+            {currentProject === projects[13] && <TaskTracker />}
         </section>
     );
 }
