@@ -19,9 +19,10 @@ function App() {
         "useReducer",
         "performance",
         "taskTracker",
+        "debounce",
     ]);
 
-    const [currentProject, setCurrentProject] = useState("taskTracker");
+    const [currentProject, setCurrentProject] = useState("debounce");
 
     const displayProject = (pro) => {
         setCurrentProject(pro);

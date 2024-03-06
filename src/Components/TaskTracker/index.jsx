@@ -80,11 +80,3 @@ function index() {
 }
 
 export default index;
-{
-    /* <Main
-                    tasks={tasks}
-                    addTask={addTask}
-                    deleteTask={deleteTask}
-                    updateTask={updateTask}
-                /> */
-}

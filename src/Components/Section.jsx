@@ -12,6 +12,7 @@ import TicTacToe from "./TicTacToe/TicTacToe";
 import UseReducer from "./UseReducer";
 import Performance from "./Performance";
 import TaskTracker from "./TaskTracker";
+import Debounce from "./Debounce";
 
 function Section({ projects, currentProject }) {
     return (
@@ -30,6 +31,7 @@ function Section({ projects, currentProject }) {
             {currentProject === projects[11] && <UseReducer />}
             {currentProject === projects[12] && <Performance />}
             {currentProject === projects[13] && <TaskTracker />}
+            {currentProject === projects[14] && <Debounce />}
         </section>
     );
 }
