@@ -13,6 +13,7 @@ import UseReducer from "./UseReducer";
 import Performance from "./Performance";
 import TaskTracker from "./TaskTracker";
 import Debounce from "./Debounce";
+import UseMemo from "./UseMemo";
 
 function Section({ projects, currentProject }) {
     return (
@@ -32,6 +33,7 @@ function Section({ projects, currentProject }) {
             {currentProject === projects[12] && <Performance />}
             {currentProject === projects[13] && <TaskTracker />}
             {currentProject === projects[14] && <Debounce />}
+            {currentProject === projects[15] && <UseMemo />}
         </section>
     );
 }

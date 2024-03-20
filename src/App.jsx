@@ -20,9 +20,10 @@ function App() {
         "performance",
         "taskTracker",
         "debounce",
+        "useMemo",
     ]);
 
-    const [currentProject, setCurrentProject] = useState("debounce");
+    const [currentProject, setCurrentProject] = useState("useMemo");
 
     const displayProject = (pro) => {
         setCurrentProject(pro);
